@@ -1,0 +1,16 @@
+PODS:
+  - Alamofire (3.4.0)
+  - SwiftyJSON (2.3.2)
+  - TLTabBarSpring (1.0.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftyJSON
+  - TLTabBarSpring
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TLTabBarSpring: d28da258d958ecb24529e5f63cbf0df4658ea6e8
+
+COCOAPODS: 0.39.0

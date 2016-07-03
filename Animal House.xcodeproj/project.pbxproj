@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064ACBFF0DFFD8A78C7680C2 /* Pods_Animal_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C33D5643BF219065A8AD4B /* Pods_Animal_House.framework */; };
+		880167AB1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 880167A91D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld */; };
+		880CB5921D17F88E00F9EF08 /* AHDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880CB5911D17F88E00F9EF08 /* AHDBManager.swift */; };
 		881592871D0A77DA007C05AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881592861D0A77DA007C05AF /* AppDelegate.swift */; };
 		881592891D0A77DA007C05AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881592881D0A77DA007C05AF /* ViewController.swift */; };
 		8815928C1D0A77DA007C05AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8815928A1D0A77DA007C05AF /* Main.storyboard */; };
 		8815928E1D0A77DA007C05AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8815928D1D0A77DA007C05AF /* Assets.xcassets */; };
 		881592911D0A77DA007C05AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8815928F1D0A77DA007C05AF /* LaunchScreen.storyboard */; };
+		881833101D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */; };
+		881C421C1D12672600A075B1 /* AHCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C421B1D12672600A075B1 /* AHCell.swift */; };
+		8846912E1D0A7BC500B6E959 /* AHViewControllerSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */; };
+		884691321D0A801400B6E959 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 884691311D0A801400B6E959 /* clock.png */; };
+		88FC53B81D28FF8C0002B542 /* animal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FC53B71D28FF8C0002B542 /* animal2.png */; };
+		88FD597C1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */; };
+		88FD597D1D26CFC900A5D0E3 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD597B1D26CFC900A5D0E3 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BB2F254F6E7126EA23486BB /* Pods-Animal House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal House.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animal House/Pods-Animal House.release.xcconfig"; sourceTree = "<group>"; };
+		880167AA1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AHAnimalCoreData.xcdatamodel; sourceTree = "<group>"; };
+		880CB5911D17F88E00F9EF08 /* AHDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHDBManager.swift; sourceTree = "<group>"; };
 		881592831D0A77DA007C05AF /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		881592861D0A77DA007C05AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		881592881D0A77DA007C05AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,15 @@
 		8815928D1D0A77DA007C05AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881592901D0A77DA007C05AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		881592921D0A77DA007C05AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_15584d_a9e3f76f_L.thumbnail.jpg; sourceTree = "<group>"; };
+		881C421B1D12672600A075B1 /* AHCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHCell.swift; sourceTree = "<group>"; };
+		8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHViewControllerSector.swift; sourceTree = "<group>"; };
+		884691311D0A801400B6E959 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		88FC53B71D28FF8C0002B542 /* animal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal2.png; sourceTree = "<group>"; };
+		88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88FD597B1D26CFC900A5D0E3 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		A17630EF69A58C13F067C0D7 /* Pods-Animal House.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal House.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animal House/Pods-Animal House.debug.xcconfig"; sourceTree = "<group>"; };
+		A1C33D5643BF219065A8AD4B /* Pods_Animal_House.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animal_House.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064ACBFF0DFFD8A78C7680C2 /* Pods_Animal_House.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +63,8 @@
 			children = (
 				881592851D0A77DA007C05AF /* Animal House */,
 				881592841D0A77DA007C05AF /* Products */,
+				DDCDAB1DF54609D78F35D5CB /* Pods */,
+				BD148721DBD19322399BEBAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +79,64 @@
 		881592851D0A77DA007C05AF /* Animal House */ = {
 			isa = PBXGroup;
 			children = (
-				881592861D0A77DA007C05AF /* AppDelegate.swift */,
-				881592881D0A77DA007C05AF /* ViewController.swift */,
+				88D7387F1D1327C90081B5AE /* Model */,
+				881C421A1D1266FB00A075B1 /* View */,
+				881592981D0A7A9E007C05AF /* Controller */,
 				8815928A1D0A77DA007C05AF /* Main.storyboard */,
 				8815928D1D0A77DA007C05AF /* Assets.xcassets */,
 				8815928F1D0A77DA007C05AF /* LaunchScreen.storyboard */,
+				884691311D0A801400B6E959 /* clock.png */,
+				88FC53B71D28FF8C0002B542 /* animal2.png */,
 				881592921D0A77DA007C05AF /* Info.plist */,
 			);
 			path = "Animal House";
+			sourceTree = "<group>";
+		};
+		881592981D0A7A9E007C05AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				881592881D0A77DA007C05AF /* ViewController.swift */,
+				8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */,
+				8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		881C421A1D1266FB00A075B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				881C421B1D12672600A075B1 /* AHCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		88D7387F1D1327C90081B5AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				881592861D0A77DA007C05AF /* AppDelegate.swift */,
+				88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */,
+				88FD597B1D26CFC900A5D0E3 /* Animal.swift */,
+				880CB5911D17F88E00F9EF08 /* AHDBManager.swift */,
+				880167A91D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BD148721DBD19322399BEBAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1C33D5643BF219065A8AD4B /* Pods_Animal_House.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDCDAB1DF54609D78F35D5CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A17630EF69A58C13F067C0D7 /* Pods-Animal House.debug.xcconfig */,
+				1BB2F254F6E7126EA23486BB /* Pods-Animal House.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 881592951D0A77DA007C05AF /* Build configuration list for PBXNativeTarget "Animal House" */;
 			buildPhases = (
+				A0A1EAA51B8D0704A89FD345 /* Check Pods Manifest.lock */,
 				8815927F1D0A77DA007C05AF /* Sources */,
 				881592801D0A77DA007C05AF /* Frameworks */,
 				881592811D0A77DA007C05AF /* Resources */,
+				50BA2C203614B77844D338FA /* Embed Pods Frameworks */,
+				821AAA4CAAA4ED0EDE3E781A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881833101D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg in Resources */,
+				884691321D0A801400B6E959 /* clock.png in Resources */,
+				88FC53B81D28FF8C0002B542 /* animal2.png in Resources */,
 				881592911D0A77DA007C05AF /* LaunchScreen.storyboard in Resources */,
 				8815928E1D0A77DA007C05AF /* Assets.xcassets in Resources */,
 				8815928C1D0A77DA007C05AF /* Main.storyboard in Resources */,
@@ -131,13 +212,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50BA2C203614B77844D338FA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animal House/Pods-Animal House-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		821AAA4CAAA4ED0EDE3E781A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animal House/Pods-Animal House-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A1EAA51B8D0704A89FD345 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8815927F1D0A77DA007C05AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881C421C1D12672600A075B1 /* AHCell.swift in Sources */,
+				88FD597D1D26CFC900A5D0E3 /* Animal.swift in Sources */,
 				881592891D0A77DA007C05AF /* ViewController.swift in Sources */,
+				880CB5921D17F88E00F9EF08 /* AHDBManager.swift in Sources */,
+				880167AB1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld in Sources */,
+				88FD597C1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift in Sources */,
 				881592871D0A77DA007C05AF /* AppDelegate.swift in Sources */,
+				8846912E1D0A7BC500B6E959 /* AHViewControllerSector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +383,7 @@
 		};
 		881592961D0A77DA007C05AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A17630EF69A58C13F067C0D7 /* Pods-Animal House.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Animal House/Info.plist";
@@ -259,6 +395,7 @@
 		};
 		881592971D0A77DA007C05AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB2F254F6E7126EA23486BB /* Pods-Animal House.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Animal House/Info.plist";
@@ -287,8 +424,22 @@
 				881592971D0A77DA007C05AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		880167A91D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				880167AA1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodel */,
+			);
+			currentVersion = 880167AA1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodel */;
+			path = AHAnimalCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8815927B1D0A77DA007C05AF /* Project object */;
 }
