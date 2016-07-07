@@ -57,16 +57,26 @@ class AHDBManager: NSObject {
             case .Success:
                 if let value = response.result.value {
                     let json = JSON(value)
-      //              print(json)
+                    print(json)
                     for (_,subJson):(String, JSON) in json {
 
                         let animal = NSEntityDescription.insertNewObjectForEntityForName("Animal", inManagedObjectContext: self.managedObjectContext) as! Animal
                         animal.name = subJson["name"].string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-                        animal.tit = subJson["tit"].string!
+                        if let title = subJson["tit"].string {
+                         animal.tit = title
+                        }
+                        
+                        
                         animal.linkPhoto = subJson["img"].string!.stringByReplacingOccurrencesOfString("\\/", withString: "/")
                         animal.sector = sector
                         animal.typeNote = 1
-                        animal.photo = self.loadImageFromWeb(url: subJson["img"].string!.stringByReplacingOccurrencesOfString("\\/", withString: "/"))
+                        
+                        //load image
+                        var photo:NSData? = nil
+                        if  let nsUrl = NSURL(string: subJson["img"].string!.stringByReplacingOccurrencesOfString("\\/", withString: "/")){
+                            photo = NSData(contentsOfURL: nsUrl)
+                        }
+                        animal.photo = photo
                         self.saveContext()
                     }
                     self.delegate.refresh("nil")
@@ -79,16 +89,7 @@ class AHDBManager: NSObject {
         }
         
     }
-    //loadImage fromWeb
-    //загрузить файлы картинок из интерента
-    func loadImageFromWeb(url url:String) -> (NSData?) {
-        print(url)
-         var photo:NSData? = nil
-        if  let nsUrl = NSURL(string: url){
-           photo = NSData(contentsOfURL: nsUrl)
-        }
-       return photo
-    }
+   
     
     
     //удалить animal по сектору и типу
@@ -137,7 +138,7 @@ class AHDBManager: NSObject {
                 animal.tit = currentAnimal.tit
                 animal.linkPhoto = currentAnimal.linkPhoto
                 animal.sector = currentAnimal.sector
-                animal.typeNote = 0
+                animal.typeNote = typeTo
                 animal.photo = currentAnimal.photo
                 self.saveContext()
                 

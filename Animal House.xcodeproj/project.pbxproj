@@ -17,8 +17,11 @@
 		881592911D0A77DA007C05AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8815928F1D0A77DA007C05AF /* LaunchScreen.storyboard */; };
 		881833101D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */; };
 		881C421C1D12672600A075B1 /* AHCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C421B1D12672600A075B1 /* AHCell.swift */; };
+		882BAFE01D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BAFDF1D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift */; };
 		8846912E1D0A7BC500B6E959 /* AHViewControllerSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */; };
-		884691321D0A801400B6E959 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 884691311D0A801400B6E959 /* clock.png */; };
+		885456E41D2D7A1B00C0208A /* AHAnimalHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885456E31D2D7A1B00C0208A /* AHAnimalHouse.swift */; };
+		889E15B11D2ED33200A6E265 /* all40.png in Resources */ = {isa = PBXBuildFile; fileRef = 889E15B01D2ED33200A6E265 /* all40.png */; };
+		889E15B31D2ED50100A6E265 /* all20.png in Resources */ = {isa = PBXBuildFile; fileRef = 889E15B21D2ED50100A6E265 /* all20.png */; };
 		88FC53B81D28FF8C0002B542 /* animal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FC53B71D28FF8C0002B542 /* animal2.png */; };
 		88FD597C1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */; };
 		88FD597D1D26CFC900A5D0E3 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD597B1D26CFC900A5D0E3 /* Animal.swift */; };
@@ -37,8 +40,11 @@
 		881592921D0A77DA007C05AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_15584d_a9e3f76f_L.thumbnail.jpg; sourceTree = "<group>"; };
 		881C421B1D12672600A075B1 /* AHCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHCell.swift; sourceTree = "<group>"; };
+		882BAFDF1D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalWhereAreWeViewController.swift; sourceTree = "<group>"; };
 		8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHViewControllerSector.swift; sourceTree = "<group>"; };
-		884691311D0A801400B6E959 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		885456E31D2D7A1B00C0208A /* AHAnimalHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHAnimalHouse.swift; sourceTree = "<group>"; };
+		889E15B01D2ED33200A6E265 /* all40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all40.png; sourceTree = "<group>"; };
+		889E15B21D2ED50100A6E265 /* all20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all20.png; sourceTree = "<group>"; };
 		88FC53B71D28FF8C0002B542 /* animal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal2.png; sourceTree = "<group>"; };
 		88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88FD597B1D26CFC900A5D0E3 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -79,14 +85,13 @@
 		881592851D0A77DA007C05AF /* Animal House */ = {
 			isa = PBXGroup;
 			children = (
+				889E15AF1D2ED30700A6E265 /* Image */,
 				88D7387F1D1327C90081B5AE /* Model */,
 				881C421A1D1266FB00A075B1 /* View */,
 				881592981D0A7A9E007C05AF /* Controller */,
 				8815928A1D0A77DA007C05AF /* Main.storyboard */,
 				8815928D1D0A77DA007C05AF /* Assets.xcassets */,
 				8815928F1D0A77DA007C05AF /* LaunchScreen.storyboard */,
-				884691311D0A801400B6E959 /* clock.png */,
-				88FC53B71D28FF8C0002B542 /* animal2.png */,
 				881592921D0A77DA007C05AF /* Info.plist */,
 			);
 			path = "Animal House";
@@ -96,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				881592881D0A77DA007C05AF /* ViewController.swift */,
-				8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */,
+				882BAFDF1D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift */,
 				8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */,
 			);
 			name = Controller;
@@ -110,10 +115,22 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		889E15AF1D2ED30700A6E265 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				88FC53B71D28FF8C0002B542 /* animal2.png */,
+				889E15B01D2ED33200A6E265 /* all40.png */,
+				889E15B21D2ED50100A6E265 /* all20.png */,
+				8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		88D7387F1D1327C90081B5AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				881592861D0A77DA007C05AF /* AppDelegate.swift */,
+				885456E31D2D7A1B00C0208A /* AHAnimalHouse.swift */,
 				88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */,
 				88FD597B1D26CFC900A5D0E3 /* Animal.swift */,
 				880CB5911D17F88E00F9EF08 /* AHDBManager.swift */,
@@ -201,12 +218,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889E15B31D2ED50100A6E265 /* all20.png in Resources */,
 				881833101D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg in Resources */,
-				884691321D0A801400B6E959 /* clock.png in Resources */,
 				88FC53B81D28FF8C0002B542 /* animal2.png in Resources */,
 				881592911D0A77DA007C05AF /* LaunchScreen.storyboard in Resources */,
 				8815928E1D0A77DA007C05AF /* Assets.xcassets in Resources */,
 				8815928C1D0A77DA007C05AF /* Main.storyboard in Resources */,
+				889E15B11D2ED33200A6E265 /* all40.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +290,9 @@
 				880167AB1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld in Sources */,
 				88FD597C1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift in Sources */,
 				881592871D0A77DA007C05AF /* AppDelegate.swift in Sources */,
+				885456E41D2D7A1B00C0208A /* AHAnimalHouse.swift in Sources */,
 				8846912E1D0A7BC500B6E959 /* AHViewControllerSector.swift in Sources */,
+				882BAFE01D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

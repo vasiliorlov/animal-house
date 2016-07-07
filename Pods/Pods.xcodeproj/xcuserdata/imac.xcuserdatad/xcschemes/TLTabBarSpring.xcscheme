@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '028C0580BD8DAE0AB6C70707'
+               BlueprintIdentifier = '22506CA4799A96D5116ED76C'
                BlueprintName = 'TLTabBarSpring'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TLTabBarSpring.framework'>

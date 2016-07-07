@@ -8,5 +8,6 @@ target ‘Animal House’ do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'TLTabBarSpring'
+pod 'KCFloatingActionButton'
 end
 

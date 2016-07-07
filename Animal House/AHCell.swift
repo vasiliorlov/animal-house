@@ -23,16 +23,17 @@ class AHCell: UITableViewCell {
         
         didSet {
             print(nameLabel.text ," isPhotoView = ",isPhotoView )
-            if isPhotoView ==  false {
+            if isPhotoView ==  false   {
                 //hide photo
                     UIView.transitionFromView(photoView,
                     toView: descriptionView,
                     duration: 1.0,
                     options: [UIViewAnimationOptions.TransitionFlipFromLeft , UIViewAnimationOptions.ShowHideTransitionViews],
                     completion:nil)
-                    } else {
+                    } else if isPhotoView == true  {
                 //
                 //    //show photo
+               
                     UIView.transitionFromView(descriptionView,
                     toView: photoView,
                     duration: 1.0,
@@ -47,6 +48,12 @@ class AHCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //backGround
+        let image = UIImage(named: "all20")!
+        let scaled = UIImage(CGImage: image.CGImage!, scale: UIScreen.mainScreen().scale, orientation: image.imageOrientation)
+        descriptionView.backgroundColor = UIColor(patternImage: scaled)
+        photoView.backgroundColor = UIColor(patternImage: scaled)
+        
         // Initialization code
     }
 
