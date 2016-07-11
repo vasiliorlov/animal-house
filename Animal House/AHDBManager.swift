@@ -9,7 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import CoreData
+import RealmSwift
+
 
 protocol AHLoadProtocol {
     func refresh(sender:AnyObject)
@@ -19,32 +20,21 @@ protocol AHLoadProtocol {
 class AHDBManager: NSObject {
   
     var delegate:AHLoadProtocol! = nil
-
+    let realm = try! Realm()
     
     
    //get animals from sector
    //Вернуть массив животных по нужном сектору с типом = 0
     func readInformFromDB(sector sector:String, type:Int)->([Animal]){
-        let request = NSFetchRequest.init(entityName: "Animal")
-        let sort = NSSortDescriptor.init(key: "name", ascending: true)
-        let predicate = NSPredicate(format: "sector = %@ AND typeNote = %@",argumentArray: [sector, type])
         
-        request.predicate = predicate
-        request.sortDescriptors = [sort]
-        
+        let animalsList =  realm.objects(Animal).filter("sector = %@ AND typeNote = %@",sector, type)
         var animals = [Animal]()
-        do {
-            animals = try self.managedObjectContext.executeFetchRequest(request) as! [Animal]
-//            for  currentAnimal in animals {
-//               // print(currentAnimal.valueForKey("name"))
-//            }
-            // success ...
-        } catch let error as NSError {
-            // failure
-            print("Fetch failed: \(error.localizedDescription)")
+        for animal in animalsList {
+            animals.append(animal)
         }
-       
         return animals
+
+
     }
     
     //reload anomal from sector
@@ -57,10 +47,10 @@ class AHDBManager: NSObject {
             case .Success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    print(json)
+
                     for (_,subJson):(String, JSON) in json {
 
-                        let animal = NSEntityDescription.insertNewObjectForEntityForName("Animal", inManagedObjectContext: self.managedObjectContext) as! Animal
+                        let animal = Animal()
                         animal.name = subJson["name"].string!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                         if let title = subJson["tit"].string {
                          animal.tit = title
@@ -77,7 +67,10 @@ class AHDBManager: NSObject {
                             photo = NSData(contentsOfURL: nsUrl)
                         }
                         animal.photo = photo
-                        self.saveContext()
+                        try! self.realm.write {
+                            self.realm.add(animal, update: true)
+                            
+                        }
                     }
                     self.delegate.refresh("nil")
                     
@@ -95,129 +88,32 @@ class AHDBManager: NSObject {
     //удалить animal по сектору и типу
     
     func deleteAnimal(sector sector:String, type:Int) -> Bool {
-        print("delete")
-        let request = NSFetchRequest.init(entityName: "Animal")
-        let sort = NSSortDescriptor.init(key: "name", ascending: true)
-        let predicate = NSPredicate(format: "sector = %@ AND typeNote = %@",argumentArray: [sector, type])
+
+         var result = false
+        let animalsList =  realm.objects(Animal).filter("sector = %@ AND typeNote = %@",sector, type)
         
-        request.predicate = predicate
-        request.sortDescriptors = [sort]
-        
-        var animals = [Animal]()
-        do {
-            animals = try self.managedObjectContext.executeFetchRequest(request) as! [Animal]
-            for  currentAnimal in animals {
-                   self.managedObjectContext.deleteObject(currentAnimal)
-            }
-            // success ...
-        } catch let error as NSError {
-            // failure
-            print("Fetch failed: \(error.localizedDescription)")
+        try! realm.write {
+            realm.delete(animalsList)
+            result = true
         }
-        
-        return true
+
+        return result
     }
     
     //поменять тип с 1 на 0
     func updateAnimal(sector sector:String, typeFrom:Int, typeTo:Int) -> Bool {
-        print("update")
-        let request = NSFetchRequest.init(entityName: "Animal")
-        let sort = NSSortDescriptor.init(key: "name", ascending: true)
-        let predicate = NSPredicate(format: "sector = %@ AND typeNote = %@",argumentArray: [sector, typeFrom])
+
         
-        request.predicate = predicate
-        request.sortDescriptors = [sort]
+        let animalsList =  realm.objects(Animal).filter("sector = %@ AND typeNote = %@",sector, typeFrom)
         
-      
-        var animals = [Animal]()
-        do {
-            animals = try self.managedObjectContext.executeFetchRequest(request) as! [Animal]
-            for  currentAnimal in animals {
-                let animal = NSEntityDescription.insertNewObjectForEntityForName("Animal", inManagedObjectContext: self.managedObjectContext) as! Animal
-                animal.name = currentAnimal.name
-                animal.tit = currentAnimal.tit
-                animal.linkPhoto = currentAnimal.linkPhoto
-                animal.sector = currentAnimal.sector
-                animal.typeNote = typeTo
-                animal.photo = currentAnimal.photo
-                self.saveContext()
-                
+        for animal in animalsList {
+          try! realm.write {
+            animal.typeNote = typeTo
             }
-            // success ...
-        } catch let error as NSError {
-            // failure
-            print("Fetch failed: \(error.localizedDescription)")
         }
-        
+
         return true
     }
     
     
-    
-    
-    // MARK: - Core Data stack
-    
-    lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.orlov.vasili.testcoredate" in the application's documents Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1]
-    }()
-    
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("AHAnimalCoreData", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOfURL: modelURL)!
-    }()
-    
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
-        // Create the coordinator and store
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
-        var failureReason = "There was an error creating or loading the application's saved data."
-        do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
-        } catch {
-            // Report any error we got.
-            var dict = [String: AnyObject]()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason
-            
-            dict[NSUnderlyingErrorKey] = error as NSError
-            let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            // Replace this with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
-        }
-        
-        return coordinator
-    }()
-    
-    lazy var managedObjectContext: NSManagedObjectContext = {
-        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
-        let coordinator = self.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
-        return managedObjectContext
-    }()
-    
-    // MARK: - Core Data Saving support
-    
-    func saveContext () {
-        if managedObjectContext.hasChanges {
-            do {
-                try managedObjectContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
-            }
-        }
-    }
-    
-    
-   
 }

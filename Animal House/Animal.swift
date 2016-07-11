@@ -7,11 +7,19 @@
 //
 
 import Foundation
-import CoreData
-
-
-class Animal: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+import RealmSwift
+class Animal: Object{
+    dynamic var linkPhoto: String?
+    dynamic var name: String?
+    dynamic var sector: String?
+    dynamic var tit: String?
+    dynamic var typeNote:Int = -1
+    dynamic var photo: NSData?
+    
+    
+    override static func primaryKey() -> String? {
+        return "name"
+    }
+    
 }
+

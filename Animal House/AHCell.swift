@@ -22,7 +22,7 @@ class AHCell: UITableViewCell {
     var isPhotoView:Bool = true {
         
         didSet {
-            print(nameLabel.text ," isPhotoView = ",isPhotoView )
+
             if isPhotoView ==  false   {
                 //hide photo
                     UIView.transitionFromView(photoView,

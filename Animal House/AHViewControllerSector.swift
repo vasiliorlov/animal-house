@@ -61,11 +61,11 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         animals = manager.readInformFromDB(sector: sector, type: 0)
-        print("sector = ",sector," animals = ", animals.count)
+
         self.view.fadeOut()
         self.view.fadeIn()
         tableView.reloadData()
-        print("viewWillAppear")
+
        
         
     }
@@ -81,7 +81,7 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
             super.viewDidLoad()
-        print("viewDidLoad")
+
         //manual reload
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Идет обновление...")
@@ -109,11 +109,11 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
         
         //
 
-        fab.addItem("Наш сайт.", icon: UIImage(named: "animal2")!, handler: { item in
+        fab.addItem("Наш сайт.", icon: UIImage(named: "site2")!, handler: { item in
             UIApplication.sharedApplication().openURL(NSURL(string: "http://vao-priut.org")!)
             self.fab.close()
         })
-        fab.addItem("Как добраться?", icon: UIImage(named: "animal2")!, handler: { item in
+        fab.addItem("Как добраться?", icon: UIImage(named: "road2")!, handler: { item in
             
             self.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
             // Cover Vertical is necessary for CurrentContext
@@ -151,20 +151,34 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
         }
          manager.delegate = self
         //удаляем все записи с типом 1
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+  
         self.manager.deleteAnimal(sector:self.sector, type: 1)
-        print("удалили тип 1")
+
         //загружаем новые
         self.manager.loadInform(url:url, sector: self.sector)
-        print("загрузили тип 1")
-        }
+
+        
     }
     
     
     //manual refresh
     func refresh(sender:AnyObject) {
-            refreshBegin("Refresh",
-                     refreshEnd: {(x:Int) -> () in
+
+        
+        
+        //если что-то загрузили
+        if self.manager.readInformFromDB(sector: self.sector, type: 1).count > 0 {
+            //удаяем с типом 0
+            
+            self.manager.deleteAnimal(sector:self.sector, type: 0)
+
+            //меням тип записи с 1 на 0
+            self.manager.updateAnimal(sector: self.sector, typeFrom: 1, typeTo: 0)
+
+        
+        }
+        
+       
                         self.animals = self.manager.readInformFromDB(sector: self.sector, type: 0)
                         self.tableView.reloadData()
                         //потушим emptyView и остановим индикатор
@@ -172,31 +186,10 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
                         self.loadEmptyIndicator.stopAnimating()
                         self.loadEmptyIndicator.hidden = true
                         self.refreshControl.endRefreshing()
-        })
+        
     }
     
-    func refreshBegin(newtext:String, refreshEnd:(Int) -> ()) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                print("refreshing")
-            
-    
-           //если что-то загрузили
-            if self.manager.readInformFromDB(sector: self.sector, type: 1).count > 0 {
-                //удаяем с типом 0
-                
-                 self.manager.deleteAnimal(sector:self.sector, type: 0)
-                print("удалили тип 0")
-                //меням тип записи с 1 на 0
-                self.manager.updateAnimal(sector: self.sector, typeFrom: 1, typeTo: 0)
-                print("изменили с типа 1 на 0")
-            }
-            
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                refreshEnd(0)
-            }
-        }
-    }
+
     
     //MARK: - table UITableViewDataSource
     
@@ -216,7 +209,6 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func  tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        print("select " ,indexPath)
         let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! AHCell
         if(cell.isPhotoView == true){
          cell.isPhotoView = false
@@ -227,7 +219,6 @@ class AHViewControllerSector: UIViewController, UITableViewDataSource, UITableVi
         
     }
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath){
-       print("deselect " ,indexPath)
         if self.tableView.cellForRowAtIndexPath(indexPath) != nil {
          let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! AHCell
             if(cell.isPhotoView == false){

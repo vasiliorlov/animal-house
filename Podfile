@@ -9,5 +9,7 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'TLTabBarSpring'
 pod 'KCFloatingActionButton'
+# CORE DATA
+pod 'RealmSwift'
 end
 

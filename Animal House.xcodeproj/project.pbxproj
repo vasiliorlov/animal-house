@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		064ACBFF0DFFD8A78C7680C2 /* Pods_Animal_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C33D5643BF219065A8AD4B /* Pods_Animal_House.framework */; };
-		880167AB1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 880167A91D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld */; };
 		880CB5921D17F88E00F9EF08 /* AHDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880CB5911D17F88E00F9EF08 /* AHDBManager.swift */; };
 		881592871D0A77DA007C05AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881592861D0A77DA007C05AF /* AppDelegate.swift */; };
 		881592891D0A77DA007C05AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881592881D0A77DA007C05AF /* ViewController.swift */; };
@@ -20,16 +19,16 @@
 		882BAFE01D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BAFDF1D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift */; };
 		8846912E1D0A7BC500B6E959 /* AHViewControllerSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */; };
 		885456E41D2D7A1B00C0208A /* AHAnimalHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885456E31D2D7A1B00C0208A /* AHAnimalHouse.swift */; };
+		885AFB901D3419AF00D0F4F3 /* road2.png in Resources */ = {isa = PBXBuildFile; fileRef = 885AFB8F1D3419AF00D0F4F3 /* road2.png */; };
+		885AFB921D3419BA00D0F4F3 /* site2.png in Resources */ = {isa = PBXBuildFile; fileRef = 885AFB911D3419BA00D0F4F3 /* site2.png */; };
 		889E15B11D2ED33200A6E265 /* all40.png in Resources */ = {isa = PBXBuildFile; fileRef = 889E15B01D2ED33200A6E265 /* all40.png */; };
 		889E15B31D2ED50100A6E265 /* all20.png in Resources */ = {isa = PBXBuildFile; fileRef = 889E15B21D2ED50100A6E265 /* all20.png */; };
 		88FC53B81D28FF8C0002B542 /* animal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FC53B71D28FF8C0002B542 /* animal2.png */; };
-		88FD597C1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */; };
 		88FD597D1D26CFC900A5D0E3 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD597B1D26CFC900A5D0E3 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BB2F254F6E7126EA23486BB /* Pods-Animal House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal House.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animal House/Pods-Animal House.release.xcconfig"; sourceTree = "<group>"; };
-		880167AA1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AHAnimalCoreData.xcdatamodel; sourceTree = "<group>"; };
 		880CB5911D17F88E00F9EF08 /* AHDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHDBManager.swift; sourceTree = "<group>"; };
 		881592831D0A77DA007C05AF /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		881592861D0A77DA007C05AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,10 +42,11 @@
 		882BAFDF1D2B76E3003FDB0C /* ModalWhereAreWeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalWhereAreWeViewController.swift; sourceTree = "<group>"; };
 		8846912D1D0A7BC500B6E959 /* AHViewControllerSector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHViewControllerSector.swift; sourceTree = "<group>"; };
 		885456E31D2D7A1B00C0208A /* AHAnimalHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AHAnimalHouse.swift; sourceTree = "<group>"; };
+		885AFB8F1D3419AF00D0F4F3 /* road2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = road2.png; sourceTree = "<group>"; };
+		885AFB911D3419BA00D0F4F3 /* site2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = site2.png; sourceTree = "<group>"; };
 		889E15B01D2ED33200A6E265 /* all40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all40.png; sourceTree = "<group>"; };
 		889E15B21D2ED50100A6E265 /* all20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all20.png; sourceTree = "<group>"; };
 		88FC53B71D28FF8C0002B542 /* animal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animal2.png; sourceTree = "<group>"; };
-		88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88FD597B1D26CFC900A5D0E3 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		A17630EF69A58C13F067C0D7 /* Pods-Animal House.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal House.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animal House/Pods-Animal House.debug.xcconfig"; sourceTree = "<group>"; };
 		A1C33D5643BF219065A8AD4B /* Pods_Animal_House.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animal_House.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +120,8 @@
 			children = (
 				88FC53B71D28FF8C0002B542 /* animal2.png */,
 				889E15B01D2ED33200A6E265 /* all40.png */,
+				885AFB8F1D3419AF00D0F4F3 /* road2.png */,
+				885AFB911D3419BA00D0F4F3 /* site2.png */,
 				889E15B21D2ED50100A6E265 /* all20.png */,
 				8818330F1D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg */,
 			);
@@ -131,10 +133,8 @@
 			children = (
 				881592861D0A77DA007C05AF /* AppDelegate.swift */,
 				885456E31D2D7A1B00C0208A /* AHAnimalHouse.swift */,
-				88FD597A1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift */,
 				88FD597B1D26CFC900A5D0E3 /* Animal.swift */,
 				880CB5911D17F88E00F9EF08 /* AHDBManager.swift */,
-				880167A91D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -219,9 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				889E15B31D2ED50100A6E265 /* all20.png in Resources */,
+				885AFB921D3419BA00D0F4F3 /* site2.png in Resources */,
 				881833101D18562000BACDC0 /* 0_15584d_a9e3f76f_L.thumbnail.jpg in Resources */,
 				88FC53B81D28FF8C0002B542 /* animal2.png in Resources */,
 				881592911D0A77DA007C05AF /* LaunchScreen.storyboard in Resources */,
+				885AFB901D3419AF00D0F4F3 /* road2.png in Resources */,
 				8815928E1D0A77DA007C05AF /* Assets.xcassets in Resources */,
 				8815928C1D0A77DA007C05AF /* Main.storyboard in Resources */,
 				889E15B11D2ED33200A6E265 /* all40.png in Resources */,
@@ -287,8 +289,6 @@
 				88FD597D1D26CFC900A5D0E3 /* Animal.swift in Sources */,
 				881592891D0A77DA007C05AF /* ViewController.swift in Sources */,
 				880CB5921D17F88E00F9EF08 /* AHDBManager.swift in Sources */,
-				880167AB1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld in Sources */,
-				88FD597C1D26CFC900A5D0E3 /* Animal+CoreDataProperties.swift in Sources */,
 				881592871D0A77DA007C05AF /* AppDelegate.swift in Sources */,
 				885456E41D2D7A1B00C0208A /* AHAnimalHouse.swift in Sources */,
 				8846912E1D0A7BC500B6E959 /* AHViewControllerSector.swift in Sources */,
@@ -407,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Animal House/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orlov.vasili.Animal-House";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Animal House/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.orlov.vasili.Animal-House";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,19 +449,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		880167A91D18FF2400A1797F /* AHAnimalCoreData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				880167AA1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodel */,
-			);
-			currentVersion = 880167AA1D18FF2400A1797F /* AHAnimalCoreData.xcdatamodel */;
-			path = AHAnimalCoreData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8815927B1D0A77DA007C05AF /* Project object */;
 }
